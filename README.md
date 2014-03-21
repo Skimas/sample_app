@@ -9,4 +9,4 @@ Bootstrap 3.1.1
 Live: http://serveris.herokuapp.com
 
 
-This is sample ruby on rails app.
+This is sample Ruby on Rails app. 
