@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 ruby '2.1.0'
 gem 'rails', '4.0.4'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'sprockets', '2.12.0'
+gem 'faker', '1.1.2'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do 
 	gem 'sqlite3', '1.3.8'
