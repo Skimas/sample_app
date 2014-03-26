@@ -1,15 +1,35 @@
 <% provide(:title, @user.name) %>
 
-<div class="row">
- <aside class="span4">
-  <section>
-	<h1>
+<div class="container">
+<div class="row row-offcanvas row-offcanvas-left">
 
-	    <%= gravatar_for @user %>
-		<%= @user.name %>
+<!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <h1>
 
-	</h1>
-   </section>
-  </aside>
-  </div>
+    <%= gravatar_for @user %>
+    <%= @user.name %>
+
+  </h1>
+        </div>
+    
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-9">
+        <% if @user.microposts.any? %>
+          <h1>Microposts (<%= @user.microposts.count %>)</h1>
+          <ol class="microposts">
+         <%= render @microposts %><br>
+         </ol>
+
+         <%= will_paginate @microposts %>
+         <% end %>
+          
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+
+
+
+
  
